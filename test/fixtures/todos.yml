@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  due_date: 2021-01-03 17:44:58
+  status: false
+  priority: 1
+  user_id: 1
+
+two:
+  name: MyString
+  description: MyString
+  due_date: 2021-01-03 17:44:58
+  status: false
+  priority: 1
+  user_id: 1
