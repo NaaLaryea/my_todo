@@ -1,30 +1,43 @@
-<p id="notice"><%= notice %></p>
+<table class="container table table-bordered table-striped">
 
-<p>
-  <strong>Name:</strong>
-  <%= @todo.name %>
-</p>
+<tr>
+  <td><strong>Name </strong></td>
+  <td style="padding-left: 6%"><%= @todo.name %></td>
+</tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @todo.description %>
-</p>
+<tr>
+  <td><strong>Description:</strong></td>
+  <td style="padding-left: 6%"><%= @todo.description %></td>
+</tr>
 
-<p>
-  <strong>Due date:</strong>
-  <%= @todo.due_date %>
-</p>
+<tr>
+  <td><strong>Date created:</strong></td>
+  <td style="padding-left: 6%"><%= @todo.created_at.strftime("%d/%m/%Y") %></td>
+</tr>
 
-<p>
-  <strong>Status:</strong>
-  <%= @todo.status %>
-</p>
+<tr>
+  <td><strong>Due date:</strong></td>
+  <td style="padding-left: 6%"><%= @todo.due_date.strftime("%d/%m/%Y") %></td>
+</tr>
 
-<p>
-  <strong>Priority:</strong>
-  <%= @todo.priority %>
-</p>
+<tr>
+  <td><strong>Status:</strong></td>
+  <td style="padding-left: 6%">
+  <% if @todo.status %>
+  Completed
+  <% else %>
+  Pending
+  <% end %>
+    
+    
+    </td>
+</tr>
 
+<tr>
+  <td><strong>Priority:</strong></td>
+  <td style="padding-left: 6%"><%= @todo.priority %></td>
+</tr>
+</table>
 
 <%= link_to 'Edit', edit_todo_path(@todo) %> |
 <%= link_to 'Back', todos_path %>

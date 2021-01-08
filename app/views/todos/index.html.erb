@@ -24,10 +24,10 @@
         <td><%= todo.due_date %></td>
         <td><%= todo.status %></td>
         <td><%= todo.priority %></td>
-        <td><%= link_to 'Mark', mark_todo_path(todo.id) ,class: "btn btn-default"        %></td>
-        <td><%= link_to 'Show', todo, class: "btn btn-default"        %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo), class: "btn btn-default"        %></td>
-        <td><%= link_to 'Destroy', todo, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mark', mark_todo_path(todo.id) ,class: "btn btn-primary" %></td>
+        <td><%= link_to 'Show', todo, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_todo_path(todo), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', todo, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

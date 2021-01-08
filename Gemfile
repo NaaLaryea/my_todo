@@ -26,6 +26,7 @@ gem 'simple_form'
 gem 'rails_layout', '~> 1.0', '>= 1.0.42'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~>3.3', '>=3.3.7'
+gem "simple_calendar", "~> 2.0"
 
 
 # Use Active Storage variant

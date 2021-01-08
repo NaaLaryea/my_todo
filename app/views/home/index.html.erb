@@ -1,2 +1,15 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<br>
+<br>
+<%= link_to 'New Todo', new_todo_path, class: "btn btn-default" %>
+<br>
+<br>
+<br>
+<%= month_calendar(attribute: :due_date,events: @todos) do |date, todos| %>
+    <%= date %>
+  
+    <% todos.each do |todo| %>
+      <div>
+        <%= link_to todo.name, todo, class: "btn btn-link" %>
+      </div>
+    <% end %>
+  <% end %>
