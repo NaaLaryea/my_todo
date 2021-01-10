@@ -7,7 +7,11 @@ To create an account, a user needs an email and a password to be able to sign up
 
 As this app is user specific, any user who logs in can see only tasks that the said user has created only. Tasks created by other users are not available to anyone else aside the user who created the task.
 
-The user, once registered
+The user, once registered is able to access the Todo task board where he/she is able to input a todo task item by clicking on the "New Todo" button, after which the task created can be saved. After saving, the said task appears in a tabular form where the user can then view the details of the task created, edit to make changes and then update the task, mark a task as completed or even delete the task from the list once they have no further need of it. 
+
+Any task a user creates, the user is able to view in a calendar, which is visible on the dashboard when you log in to the application. The user can view a particular taskk by clicking on the task's link in the calendar to open it.
+
+Finally, once a user is done using the application, this user is able to logout of the application, thereby protecting the contents of his/her task list. After logging out, when next this same user wants to use the app, all he/she has to do is log in with his/her details and get access to his/her task list dashboard immediately.
 
 
 
