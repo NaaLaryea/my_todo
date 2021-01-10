@@ -1,17 +1,18 @@
+<div>
+  <%= simple_form_for(@todo) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@todo) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :due_date, as: :date, html5: true %>
+      <%= f.input :status, collection: [['Pending',false],['Completed',true]], label_method: :first, value_method: :second,prompt: "Select status" %>
+      <%= f.input :priority,  collection: 1..3, prompt: "Select priority" %>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :due_date, as: :date %>
-    <%= f.input :status %>
-    <%= f.input :priority,  collection: 1..3, prompt: "Select priority" %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>
