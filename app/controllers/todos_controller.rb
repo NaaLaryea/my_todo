@@ -4,7 +4,7 @@ class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.order(:due_date, :priority)
+    @todos = Todo.where(user_id: current_user.id).order(:due_date, :priority)
   end
 
   # GET /todos/1

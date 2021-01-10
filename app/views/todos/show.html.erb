@@ -1,43 +1,48 @@
-<table class="container table table-bordered table-striped">
+<br>
+<br>
+<br>
+<div class="col-md-6 col-md-offset-3">
+  <table class="container table table-bordered table-striped">
 
-<tr>
-  <td><strong>Name </strong></td>
-  <td style="padding-left: 6%"><%= @todo.name %></td>
-</tr>
+  <tr>
+    <td><strong>Name: </strong></td>
+    <td style="padding-left: 6%"><%= @todo.name %></td>
+  </tr>
 
-<tr>
-  <td><strong>Description:</strong></td>
-  <td style="padding-left: 6%"><%= @todo.description %></td>
-</tr>
+  <tr>
+    <td><strong>Description:</strong></td>
+    <td style="padding-left: 6%"><%= @todo.description %></td>
+  </tr>
 
-<tr>
-  <td><strong>Date created:</strong></td>
-  <td style="padding-left: 6%"><%= @todo.created_at.strftime("%d/%m/%Y") %></td>
-</tr>
+  <tr>
+    <td><strong>Date created:</strong></td>
+    <td style="padding-left: 6%"><%= @todo.created_at.strftime("%d/%m/%Y") %></td>
+  </tr>
 
-<tr>
-  <td><strong>Due date:</strong></td>
-  <td style="padding-left: 6%"><%= @todo.due_date.strftime("%d/%m/%Y") %></td>
-</tr>
+  <tr>
+    <td><strong>Due date:</strong></td>
+    <td style="padding-left: 6%"><%= @todo.due_date.strftime("%d/%m/%Y") %></td>
+  </tr>
 
-<tr>
-  <td><strong>Status:</strong></td>
-  <td style="padding-left: 6%">
-  <% if @todo.status %>
-  Completed
-  <% else %>
-  Pending
-  <% end %>
-    
-    
-    </td>
-</tr>
+  <tr>
+    <td><strong>Status:</strong></td>
+    <td style="padding-left: 6%">
+    <% if @todo.status %>
+    Completed
+    <% else %>
+    Pending
+    <% end %>
+      
+      
+      </td>
+  </tr>
 
-<tr>
-  <td><strong>Priority:</strong></td>
-  <td style="padding-left: 6%"><%= @todo.priority %></td>
-</tr>
-</table>
+  <tr>
+    <td><strong>Priority:</strong></td>
+    <td style="padding-left: 6%"><%= @todo.priority %></td>
+  </tr>
+  </table>
 
-<%= link_to 'Edit', edit_todo_path(@todo) %> |
-<%= link_to 'Back', todos_path %>
+  <%= link_to 'Edit',  edit_todo_path(@todo),class: "btn btn-primary" %> ||
+  <%= link_to 'Back', todos_path,class: "btn btn-primary" %>
+</div>

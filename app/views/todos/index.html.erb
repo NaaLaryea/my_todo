@@ -22,7 +22,11 @@
         <td><%= todo.description %></td>
         <td><%= todo.created_at %></td>
         <td><%= todo.due_date %></td>
-        <td><%= todo.status %></td>
+        <% if todo.status %>
+        <td class="success">Completed</td>
+        <% else %>
+        <td class="danger">Pending</td>
+        <% end %>
         <td><%= todo.priority %></td>
         <td><%= link_to 'Mark', mark_todo_path(todo.id) ,class: "btn btn-primary" %></td>
         <td><%= link_to 'Show', todo, class: "btn btn-primary" %></td>
@@ -35,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Todo', new_todo_path, class: "btn btn-default" %>
+<%= link_to 'New Todo', new_todo_path, class: "btn btn-primary" %>
