@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Todos</h1>
 
@@ -9,8 +9,8 @@
       <th>Description</th>
       <th>Date created</th>
       <th>Due date</th>
-      <th>Status</th>
       <th>Priority</th>
+      <th>Status</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -22,13 +22,14 @@
         <td><%= todo.description %></td>
         <td><%= todo.created_at %></td>
         <td><%= todo.due_date %></td>
+        <td><%= todo.priority %></td>
         <% if todo.status %>
         <td class="success">Completed</td>
+        <td><%= link_to 'Unmark', mark_todo_path(todo.id) ,class: "btn btn-primary" %></td>
         <% else %>
         <td class="danger">Pending</td>
-        <% end %>
-        <td><%= todo.priority %></td>
         <td><%= link_to 'Mark', mark_todo_path(todo.id) ,class: "btn btn-primary" %></td>
+        <% end %>
         <td><%= link_to 'Show', todo, class: "btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_todo_path(todo), class: "btn btn-primary" %></td>
         <td><%= link_to 'Destroy', todo, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
